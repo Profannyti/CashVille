@@ -17,10 +17,10 @@ Financial Literacy Quest: Beyond Boundaries is an engaging game designed to enha
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/yourusername/financial-literacy-quest.git`
-2. Navigate to the project directory: `cd financial-literacy-quest`
-3. Install dependencies: `pip install -r requirements.txt`
-4. Launch the game: `python main.py`
+1. Clone the repository: `https://github.com/Profannyti/CashVille`
+2. Navigate to the project directory: `cd cashville`
+3. Install dependencies: Ren'py
+4. Launch the game
 
 ## How to Play
 
