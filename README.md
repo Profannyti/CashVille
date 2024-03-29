@@ -16,6 +16,7 @@ Financial Literacy Quest: Beyond Boundaries is an engaging game designed to enha
 - **Partnerships:** Integrate banking, investment, and financial planning services directly into the game.
 
 ## Installation
+**We weren't able to host the game during the competition due to time constraints, below is the process to play the game locally. You can contact us to get the direct link of the game**
 
 1. Clone the repository: `https://github.com/Profannyti/CashVille`
 2. Navigate to the project directory: `cd cashville`
