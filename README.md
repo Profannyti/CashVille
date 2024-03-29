@@ -45,7 +45,7 @@ Financial Literacy Quest: Beyond Boundaries is developed using Ren'Py, an open-s
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project has a demo video - see the [DEMO VIDEO](https://youtu.be/rZh8gNa6FMQ) file for details.
 
 ## Feedback and Support
 
