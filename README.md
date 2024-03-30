@@ -42,7 +42,7 @@ Cashville is an engaging game designed to enhance financial literacy among young
 
 ## Credits
 
-Financial Literacy Quest: Beyond Boundaries is developed using Ren'Py, an open-source visual novel engine. Special thanks to the Ren'Py community for their support and contributions.
+Cashville is developed using Ren'Py, an open-source visual novel engine. Special thanks to the Ren'Py community for their support and contributions.
 
 ## Demo Video
 
