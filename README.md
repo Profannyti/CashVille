@@ -1,7 +1,7 @@
 #   CashVille
 ## Overview
 
-Financial Literacy Quest: Beyond Boundaries is an engaging game designed to enhance financial literacy among young adults, addressing crucial topics such as budgeting, saving, investing, and understanding credit. The game is structured into three quests: high school, college, and job scenarios, catering to different life stages. Players encounter real-life financial challenges, make decisions, and receive feedback to enhance their understanding of financial concepts.
+Cashville is an engaging game designed to enhance financial literacy among young adults, addressing crucial topics such as budgeting, saving, investing, and understanding credit. The game is structured into three quests: high school, college, and job scenarios, catering to different life stages. Players encounter real-life financial challenges, make decisions, and receive feedback to enhance their understanding of financial concepts.
 
 ## Features
 
