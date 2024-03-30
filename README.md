@@ -44,7 +44,7 @@ Financial Literacy Quest: Beyond Boundaries is an engaging game designed to enha
 
 Financial Literacy Quest: Beyond Boundaries is developed using Ren'Py, an open-source visual novel engine. Special thanks to the Ren'Py community for their support and contributions.
 
-## License
+## Demo Video
 
 This project has a demo video - see the [DEMO VIDEO](https://youtu.be/rZh8gNa6FMQ) file for details.
 
