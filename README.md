@@ -1,4 +1,5 @@
-#   CashVille
+<img src = "https://img.itch.zone/aW1nLzE1NTkzOTA1LnBuZw==/original/SmCO92.png" />
+
 ## Overview
 
 Cashville is an engaging game designed to enhance financial literacy among young adults, addressing crucial topics such as budgeting, saving, investing, and understanding credit. The game is structured into three quests: high school, college, and job scenarios, catering to different life stages. Players encounter real-life financial challenges, make decisions, and receive feedback to enhance their understanding of financial concepts.
@@ -54,4 +55,7 @@ This project has a demo video - see the [DEMO VIDEO](https://youtu.be/j6Rdypo-QK
 ## Feedback and Support
 
 For feedback or support inquiries, please contact [your@email.com](abittotheright.com).
+
+
+
 
