@@ -57,284 +57,675 @@ label life_choose:
 
     menu:
         "Choose your character Journey!"
+
         "Highschool":
             $ life = "Highschool"
             jump highschool_begin
         "College":
             $ life = "College"
-            jump college_begin
+            jump college_start
         "Job":
             $ life = "Job"
-            jump job_begin
+            jump job_start
         
-
+#Start changes in script from here:
 
 # Highschool starts here
 label highschool_begin:
-    scene highschoool
+    scene bg_highschool_2
     
     if character_gender == "Male":
         show highschool_male at left
-        "As the sun rises over the tranquil town of Rivertown, we meet our protagonist, Alex, a diligent high school student with dreams of a bright future."
-        "But little does Alex know that his journey towards financial literacy is about to begin."
-        "Alex sits in his classroom, half-listening to the teacher drone on about quadratic equations. His mind wanders to his upcoming weekend plans. Suddenly, the bell rings, and Alex gathers his things to head home."
-        "On his way home, Alex encounters three different scenarios:"
-        "1. He sees his friend, Mark, excitedly showing off his new gaming console. Mark urges Alex to join him in purchasing the latest game, promising endless fun and excitement."
-        "2. Alex's neighbor, Mrs. Johnson, asks him to help with gardening chores in exchange for a small payment. She mentions that saving money is crucial for future financial security."
-        "3. At the local convenience store, Alex spots an advertisement for a credit card with enticing rewards and perks. The idea of instant gratification tempts him."
+        "In the bustling town of CashVille, Alex, a typical high school student, stands at a crossroads, facing the daunting challenge of navigating the complexities of financial decision-making on his journey to college and beyond."
     elif character_gender == "Female":
         show highschool_female at left
-        "As the sun rises over the tranquil town of Rivertown, we meet our protagonist, Alexa, a diligent high school student with dreams of a bright future."
-        "But little does Alex know that her journey towards financial literacy is about to begin."
-        "Alex sits in her classroom, half-listening to the teacher drone on about quadratic equations. Her mind wanders to her upcoming weekend plans. Suddenly, the bell rings, and Alexa gathers her things to head home."
-        "On her way home, Alexa encounters three different scenarios:"
-        "1. She sees her friend, Mark, excitedly showing off his new gaming console. Mark urges Alex to join him in purchasing the latest game, promising endless fun and excitement."
-        "2. Alexa's neighbor, Mrs. Johnson, asks her to help with gardening chores in exchange for a small payment. She mentions that saving money is crucial for future financial security."
-        "3. At the local convenience store, Alexa spots an advertisement for a credit card with enticing rewards and perks. The idea of instant gratification tempts her."
-
+        "In the bustling town of CashVille, Alexa, a typical high school student, stands at a crossroads, facing the daunting challenge of navigating the complexities of financial decision-making on her journey to college and beyond."
 
     menu:
-        "Accept Mark's invitation and buy the new game.":
-            $ option = "A"
-            jump highschool_ends_a
-        "Help Mrs. Johnson with the gardening chores.":
-            $ option = "B"
-            jump highschool_ends_b
-        "Apply for the credit card to enjoy the rewards.":
-            $ option = "C"
-            jump highschool_ends_c
+        "Choose to immerse in fields such as literature, music, or visual arts.":
+            $ option = "Cultural"
+            jump highschool_cultural
+        "Aim for careers in science, mathematics, or other academic disciplines.":
+            $ option = "Academics"
+            jump highschool_academics
+        "Pursue something in the field of sports.":
+            $ option = "Sports"
+            jump highschool_sports
 
 
-# Higschool 1st ending
-label highschool_ends_a:
+# Higschool cultural
+label highschool_cultural:
     scene bg_highschool
-    
-    if character_gender == "Male":
-        show highschool_male_normal at left
-        "Alex chooses to buy the game with Mark, he spends all his savings, neglecting Mrs. Johnson's advice. His grades suffer as he spends more time gaming, and he misses out on valuable opportunities for personal growth."
-        "Mark eventually loses interest in the console, leaving Alex regretful of his impulsive decision. The game gathers dust on the shelf, serving as a reminder of the importance of thoughtful spending."
-    elif character_gender == "Female":
-        show highschool_female_normal at left
-        "Alexa chooses to buy the game with Mark, she spends all her savings, neglecting Mrs. Johnson's advice. Her grades suffer as she spends more time gaming, and she misses out on valuable opportunities for personal growth."
-        "Mark eventually loses interest in the console, leaving Alexa regretful of her impulsive decision. The game gathers dust on the shelf, serving as a reminder of the importance of thoughtful spending."
-    
-    menu:
-        "Click here to start college.":
-            jump college_begin
 
-
-#Highschool 2nd ending
-
-label highschool_ends_b:
-    scene bg_highschool
-    
-    if character_gender == "Male":
-        show highschool_male_happy at left
-        "Alex helps Mrs. Johnson, he earns a modest amount of money and learns the value of hard work and saving. He begins to understand the importance of delayed gratification and sets aside some money for future endeavors."
-        "Alex discovers a newfound sense of responsibility and discipline. He begins to budget his money wisely, setting financial goals for himself and planning for his future."
-    elif character_gender == "Female":
-        show highschool_female_happy at left
-        "Alexa helps Mrs. Johnson, she earns a modest amount of money and learns the value of hard work and saving. She begins to understand the importance of delayed gratification and sets aside some money for future endeavors."
-        "Alexa discovers a newfound sense of responsibility and discipline. She begins to budget her money wisely, setting financial goals for herself and planning for her future."
-
-    menu:
-        "Click here to start college.":
-            jump college_begin
-
-#Highschool 3rd ending
-label highschool_ends_c:
-    scene bg_highschool
-    
     if character_gender == "Male":
         show highschool_male_sad at left
-        "Alex applies for the credit card, he quickly falls into the trap of overspending and accumulating debt. The allure of rewards blinds him to the high interest rates and hidden fees, leading to financial strain and stress."
-        "Alex faces the consequences of his reckless spending. However, with determination and perseverance, he seeks financial guidance and learns to manage his debt responsibly, eventually freeing himself from the shackles of debt."
+        "The Financial Struggle Begins:"
+
     elif character_gender == "Female":
         show highschool_female_sad at left
-        "Alexa applies for the credit card, he quickly falls into the trap of overspending and accumulating debt. The allure of rewards blinds him to the high interest rates and hidden fees, leading to financial strain and stress."
-        "Alexa faces the consequences of her reckless spending. However, with determination and perseverance, she seeks financial guidance and learns to manage her debt responsibly, eventually freeing herself from the shackles of debt."
+        "The Financial Struggle Begins:"
 
     menu:
-        "Click here to start college.":
-            jump college_begin
+        "Apply for loan to study in a prestigious and expensive private university":
+            $ option = "Cultural_A"
+            jump cultural_A
+        "Attend a local community college while working part-time to save money.":
+            $ option = "Cultural_B"
+            jump cultural_B
+        "Seeks out scholarships, grants, and alternative funding options to minimize student loan debt.":
+            $ option = "Cultural_C"
+            jump cultural_C
 
-# College starts here
-label college_begin:
-    scene bg_college
-    
-    if character_gender == "Male":
-        show college_male at left
-        "In the vibrant campus of Ivywood University, we meet our protagonist, Alex, a bright and ambitious college student with dreams of success. Despite his busy schedule of classes and extracurricular activities, Alex yearns to gain financial literacy and independence."
-        "As Alex rushes to his morning lecture, his mind buzzes with thoughts of student loans, part-time jobs, and future career prospects. Today, he faces a critical decision that could shape his financial future. Suddenly, his phone buzzes with a notification - it's a reminder to review his monthly budget."
-        "During his break between classes, Alex encounters three different scenarios:"
-        "1. Alex's friend, Sarah, tells him about a lucrative part-time job opportunity that pays well but requires long hours, potentially affecting his academic performance."
-        "2. Alex receives an email about refinancing his student loans at a lower interest rate. However, it involves extending the repayment period, resulting in higher overall interest payments."
-        "3. While browsing online, Alex comes across a flash sale for designer clothing with steep discounts. The temptation to splurge on trendy items beckons him"
+label cultural_A:
+    scene bg_highschool
+
+    if character_gender == "Male" :
+        show highschool_male_sad at left
+        "The weight of student loan debt begins to bear down on him, overshadowing his artistic pursuits."
+        "As financial pressures mount, Alex's creativity and passion are stifled, and he finds himself forced to compromise on his dreams to manage his financial obligations."
+        jump college_start
 
     elif character_gender == "Female":
-        show college_female at left
-        "In the vibrant campus of Ivywood University, we meet our protagonist, Alexa, a bright and ambitious college student with dreams of success. Despite her busy schedule of classes and extracurricular activities, Alexa yearns to gain financial literacy and independence."
-        "As Alexa rushes to her morning lecture, her mind buzzes with thoughts of student loans, part-time jobs, and future career prospects. Today, she faces a critical decision that could shape her financial future. Suddenly, her phone buzzes with a notification - it's a reminder to review her monthly budget."
-        "During her break between classes, Alexa encounters three different scenarios:"
-        "1. Alexa's friend, Sarah, tells her about a lucrative part-time job opportunity that pays well but requires long hours, potentially affecting her academic performance."
-        "2. Alexa receives an email about refinancing her student loans at a lower interest rate. However, it involves extending the repayment period, resulting in higher overall interest payments."
-        "3. While browsing online, Alexa comes across a flash sale for designer clothing with steep discounts. The temptation to splurge on trendy items beckons her."
+        show highschool_female_sad at left
+        "The weight of student loan debt begins to bear down on her, overshadowing her artistic pursuits."
+        "As financial pressures mount, Alexa's creativity and passion are stifled, and she finds herself forced to compromise on her dreams to manage her financial obligations."
+        jump college_start
 
+label cultural_B:
+    scene bg_highschool
 
-    menu:
-        "Accept the part-time job offer for higher pay despite the potential impact on academics.":
-            $ option = "A"
-            jump college_ends_a
-        "Refinance student loans at a lower interest rate but with a longer repayment period.":
-            $ option = "B"
-            jump college_ends_b
-        "Succumb to impulsive spending and splurge on discounted designer clothing.":
-            $ option = "C"
-            jump college_ends_c
-
-
-# College 1st ending
-label college_ends_a:
-    scene bg_college
-    
     if character_gender == "Male":
-        show college_male_happy at left
-        "He juggles his coursework with the demanding job, sacrificing sleep and social time to earn extra income. However, the stress and exhaustion take a toll on Alex's mental and physical health, leading to academic struggles and burnout."
-        "He realizes that academic success is his top priority and decides to prioritize his studies over additional income. He learns to seek balance in his commitments and explores alternative ways to manage his finances without compromising his education."
+        show highschool_male_happy at left
+        "Alex saves money and prepares a strong portfolio, positioning himself for a successful transfer to a specialized school."
+        "With minimal student loan debt and a solid foundation in place, Alex thrives in his chosen field, free to explore academics without the burden of financial instability."
+        jump college_start
+
     elif character_gender == "Female":
-        show college_female_happy at left
-        "She juggles her coursework with the demanding job, sacrificing sleep and social time to earn extra income. However, the stress and exhaustion take a toll on Alexa's mental and physical health, leading to academic struggles and burnout."
-        "Alexa realizes that academic success is her top priority and decides to prioritize her studies over additional income. She learns to seek balance in her commitments and explores alternative ways to manage her finances without compromising her education."
+        show highschool_female_happy at left
+        "Alexa saves money and prepares a strong portfolio, positioning herself for a successful transfer to a specialized school."
+        "With minimal student loan debt and a solid foundation in place, Alexa thrives in her chosen field, free to explore academics without the burden of financial instability."
+        jump college_start
 
-    
-    menu:
-        "Click here to start job.":
-            jump job_begin
+label cultural_C:
+    scene bg_highschool
 
-
-#College 2nd ending
-
-label college_ends_b:
-    scene bg_college
-    
     if character_gender == "Male":
-        show college_male_normal at left
-        "He lowers his monthly payments by extending the repayment period, providing temporary relief on his budget. However, over time, Alex realizes that he ends up paying more in total interest due to the extended term. "
-        "He acknowledges the importance of researching and understanding the terms of financial agreements before making decisions. He resolves to be more diligent in evaluating loan options and seeks guidance from financial advisors to make informed choices about debt management."
+        show highschool_male_happy at left
+        "Alex weighs the benefits of prestigious universities against the financial implications and decides to pursue more affordable alternatives."
+        "By choosing a path that minimizes student loan debt while still prioritizing growth, Alex strikes a balance between his academics and financial stability."
+        jump college_start
+
     elif character_gender == "Female":
-        show college_female_normal at left
-        "She lowers her monthly payments by extending the repayment period, providing temporary relief on her budget. However, over time, Alexa realizes that she ends up paying more in total interest due to the extended term."
-        "Alexa acknowledges the importance of researching and understanding the terms of financial agreements before making decisions. She resolves to be more diligent in evaluating loan options and seeks guidance from financial advisors to make informed choices about debt management."
+        show highschool_female_happy at left
+        "Alexa weighs the benefits of prestigious universities against the financial implications and decides to pursue more affordable alternatives."
+        "By choosing a path that minimizes student loan debt while still prioritizing growth, Alexa strikes a balance between his academics and financial stability."
+        jump college_start
+
+#Highschool Academics
+label highschool_academics:
+    scene bg_highschool
+
+    if character_gender == "Male":
+        show highschool_male_sad at left
+        "The Financial Struggle Begins:"
+
+    elif character_gender == "Female":
+        show highschool_female_sad at left
+        "The Financial Struggle Begins:"
 
     menu:
-        "Click here to start job.":
-            jump job_begin
+        "Opt for an expensive private university.":
+            $ option = "Academics_A"
+            jump Academics_A
+        "Secure a part-time job and attend a reputable community college":
+            $ option = "Academics_B"
+            jump Academics_B
+        "Apply for scholarships and grants while exploring in-state public university options, striving to minimize financial burden.":
+            $ option = "Academics_C"
+            jump Academics_C
 
-#Job 3rd ending
-label college_ends_c:
+label Academics_A:
+    scene bg_highschool_3
+
+    if character_gender == "Male":
+        show highschool_male_normal at left
+        "The weight of student loan debt begins to bear down on him, overshadowing his academic pursuits."
+        " As financial pressures mount, Alex's creativity and passion are stifled, and he finds himself forced to compromise on his dreams to manage his financial obligations."
+        jump college_start
+
+    elif character_gender == "Female":
+        show highschool_female_normal at left
+        "The weight of student loan debt begins to bear down on her, overshadowing her artistic pursuits."
+        "As financial pressures mount, Alexa's creativity and passion are stifled, and she finds herself forced to compromise on her dreams to manage her financial obligations."
+        jump college_start
+
+label Academics_B:
+    scene bg_highschool
+
+    if character_gender == "Male":
+        show highschool_male at left
+        "Alex saves money and prepares a strong portfolio, positioning himself for a successful transfer to a specialized school."
+        "With minimal student loan debt and a solid foundation in place, Alex thrives in his chosen field, free to explore academics without the burden of financial instability."
+        jump college_start
+
+    elif character_gender == "Female":
+        show highschool_female at left
+        "Alexa saves money and prepares a strong portfolio, positioning herself for a successful transfer to a specialized school."
+        "With minimal student loan debt and a solid foundation in place, Alexa thrives in her chosen field, free to explore academics without the burden of financial instability."
+        jump college_start
+
+label Academics_C:
+    scene bg_highschool
+
+    if character_gender == "Male":
+        show highschool_male at left
+        "Alex weighs the benefits of prestigious universities against the financial implications and decides to pursue more affordable alternatives."
+        "By choosing a path that minimizes student loan debt while still prioritizing growth, Alex strikes a balance between his academics and financial stability."
+        jump college_start
+
+    elif character_gender == "Female":
+        show highschool_female at left
+        "Alexa weighs the benefits of prestigious universities against the financial implications and decides to pursue more affordable alternatives."
+        "By choosing a path that minimizes student loan debt while still prioritizing growth, Alexa strikes a balance between her academics and financial stability."
+        jump college_start
+
+#Highschool Sports
+label highschool_sports:
+    scene bg_highschool
+
+    if character_gender == "Male":
+        show highschool_male_sad at left
+        "The Financial Struggle Begins:"
+
+    elif character_gender == "Female":
+        show highschool_female_sad at left
+        "The Financial Struggle Begins:"
+
+    menu:
+        "Accept a scholarship offer from an elite academy without considering the long-term financial implications":
+            $ option = "sports_A"
+            jump sports_A
+        "Balancing athletic pursuits with financial responsibility":
+            $ option = "sports_B"
+            jump sports_B
+        "Evaluate college offers that provide a combination of athletic scholarships and academic merit aid.":
+            $ option = "sports_C"
+            jump sports_C
+
+label sports_A:
+    scene bg_highschool
+
+    if character_gender == "Male":
+        show highschool_male_sad at left
+        "With limited support beyond athletic expenses, Alex struggles to cover personal costs and experiences financial instability."
+        "The pressure to perform on the field intensifies as Alex grapples with the burden of financial insecurity."
+        jump college_start
+
+    elif character_gender == "Female":
+        show highschool_female_sad at left
+        "With limited support beyond athletic expenses, Alexa struggles to cover personal costs and experiences financial instability."
+        "The pressure to perform on the field intensifies as Alexa grapples with the burden of financial insecurity."
+        jump college_start
+
+label sports_B:
+    scene bg_highschool
+
+    if character_gender == "Male":
+        show highschool_male_happy at left
+        "Alex successfully secures scholarships and grants to support his athletic endeavors, maintaining financial stability while excelling in his sport."
+        "With a solid financial foundation, Alex can focus on achieving his athletic goals without the worry of financial strain."
+        jump college_start
+
+    elif character_gender == "Female":
+        show highschool_female_happy at left
+        "Alexa successfully secures scholarships and grants to support his athletic endeavors, maintaining financial stability while excelling in his sport."
+        "With a solid financial foundation, Alexa can focus on achieving his athletic goals without the worry of financial strain."
+        jump college_start
+
+label sports_C:
+    scene bg_highschool
+
+    if character_gender == "Male":
+        show highschool_male_happy at left
+        "By choosing a college that values his athletic talent and academic achievements, Alex sets himself up for success on and off the field."
+        "With financial stability ensured, he can pursue his passion for sports with confidence and dedication."
+        jump college_start
+
+    elif character_gender == "Female":
+        show highschool_female_happy at left
+        "By choosing a college that values her athletic talent and academic achievements, Alexa sets hi up herself or success on and off the field."
+        "With financial stability ensured, she can pursue her passion for sports with confidence and dedication."
+        jump college_start
+
+
+
+label college_start:
+    scene bg_college_2
+    if character_gender == "Male":
+        show casual_male at left
+    elif character_gender == "Female":
+        show casual_female at left
+
+    menu:
+        "Choose your character Journey!"
+
+        "Part-Time Job Seeker":
+            $ life = "Part-Time Job Seeker"
+            jump college_part_time
+        "Entrepreneur":
+            $ life = "Entrepreneur"
+            jump college_entrepreneur
+        "Aim for higher studies":
+            $ life = "Job"
+            jump college_higher_studies
+        
+
+#College Begins
+label college_part_time:
     scene bg_college
     
     if character_gender == "Male":
         show college_male_sad at left
-        "He indulges in the thrill of purchasing discounted designer clothing, satisfying his immediate desires. However, the excitement fades quickly, and Alex is left with guilt and regret as he struggles to justify the unnecessary expenses. "
-        "He reflects on his spending habits and commits to practicing restraint and discipline in his purchases. He embraces the concept of delayed gratification and sets financial goals to prioritize saving and investing for his future."
+        "Alex arrives at college excited but quickly realizes the financial burden of tuition and living expenses."
+
     elif character_gender == "Female":
         show college_female_sad at left
-        "She indulges in the thrill of purchasing discounted designer clothing, satisfying her immediate desires. However, the excitement fades quickly, and Alexa is left with guilt and regret as she struggles to justify the unnecessary expenses."
-        "Alexa reflects on her spending habits and commits to practicing restraint and discipline in her purchases. She embraces the concept of delayed gratification and sets financial goals to prioritize saving and investing for her future."
-
-    menu:
-        "Click here to start job.":
-            jump job_begin
-
-
-# Job starts here
-label job_begin:
-    scene job_bg
-    
-    if character_gender == "Male":
-        show job_male at left
-        "In the bustling city of Metropolis, we meet our protagonist, Alex, a diligent young man who works tirelessly at his job in a prestigious financial firm."
-        "Despite his busy schedule, Alex dreams of achieving financial stability and securing a bright future for himself."
-        "As Alex settles into his office cubicle, his mind races with thoughts of bills to pay and savings to grow."
-        "Today, he faces a critical decision that could shape his financial journey. Suddenly, his phone buzzes with a notification - it's a reminder to review his monthly budget."
-        "During his lunch break, ALex encounters three different scenarios:"
-        "1. Alex's colleague, Jason, excitedly shares news about a high-risk investment opportunity with potentially high returns. He urges Alex to join him in investing a significant portion of him savings."
-        "2. Alex's boss, Mr. Thompson, offers him a promotion with a substantial salary increase. However, it comes with longer work hours and increased stress levels."
-        "3. While window shopping during his break, Alex spots a stunning designer watch on sale. The temptation to indulge in a luxury purchase beckons him."
-    elif character_gender == "Female":
-        show job_female at left
-        "In the bustling city of Metropolis, we meet our protagonist, ALexa, a diligent young woman who works tirelessly at her job in a prestigious financial firm."
-        "Despite her busy schedule, Alexa dreams of achieving financial stability and securing a bright future for herself."
-        "As Alexa settles into her office cubicle, her mind races with thoughts of bills to pay and savings to grow."
-        "Today, she faces a critical decision that could shape her financial journey. Suddenly, her phone buzzes with a notification - it's a reminder to review her monthly budget."
-        "During her lunch break, Alexa encounters three different scenarios:"
-        "1. Alexa's colleague, Jason, excitedly shares news about a high-risk investment opportunity with potentially high returns. He urges Mia to join him in investing a significant portion of her savings."
-        "2. ALexa's boss, Mr. Thompson, offers her a promotion with a substantial salary increase. However, it comes with longer work hours and increased stress levels."
-        "3. While window shopping during her break, Mia spots a stunning designer watch on sale. The temptation to indulge in a luxury purchase beckons her."
+        "Alexa arrives at college excited but quickly realizes the financial burden of tuition and living expenses."
 
 
     menu:
-        "Accept Jason's investment proposal and invest a significant portion of savings.":
+        "Accept a low-paying job without considering future financial goals":
             $ option = "A"
-            jump job_ends_a
-        "Accept the promotion from Mr. Thompson and embrace the longer work hours and stress.":
+            jump college_part_a
+        "Part-time job with a focus on career advancement while learning about budgeting.":
             $ option = "B"
-            jump job_ends_b
-        "Splurge on the designer watch, indulging in a luxury purchase.":
+            jump college_part_b
+        "Explore various part-time job options, setting aside a portion for savings.":
             $ option = "C"
-            jump job_ends_c
+            jump college_part_c
+
+label college_part_a:
+    scene bg_college
+
+    if character_gender == "Male":
+        show college_male_sad at left
+        "Alex finds it challenging to cover expenses and fails to save for the future, leading to financial instability and missed opportunities for growth."
+        jump job_start
+
+    elif character_gender == "Female":
+        show college_female_sad at left
+        "By choosing a college that values his athletic talent and academic achievements, Alexa sets himself up for success on and off the field."
+        "With financial stability ensured, he can pursue his passion for sports with confidence and dedication."
+        jump job_start
 
 
-# Job 1st ending
-label job_ends_a:
-    scene job_bg
+label college_part_b:
+    scene bg_college
+
+    if character_gender == "Male":
+        show college_male_sad at left
+        "Alex finds it challenging to cover expenses and fails to save for the future, leading to financial instability and missed opportunities for growth."
+        jump job_start
+
+    elif character_gender == "Female":
+        show college_female_sad at left
+        "By prioritizing career growth and financial education, Alexa builds valuable skills and networks, setting the stage for future success."
+        "With careful budgeting and strategic investments, Alexa achieves financial stability and lays a strong foundation for long-term financial health."
+        jump job_start
+
+
+label college_part_c:
+
+    scene bg_college
+
+    if character_gender == "Male":
+        show college_male_sad at left
+        "Alex finds it challenging to cover expenses and fails to save for the future, leading to financial instability and missed opportunities for growth."
+        jump job_start
+
+    elif character_gender == "Female":
+        show college_female_sad at left
+        "Alexa takes a balanced approach, considering both immediate financial needs and long-term goals."
+        "While not maximizing immediate earnings, this approach allows Alexa to maintain financial stability while also preparing for future opportunities."
+        jump job_start
+
+
+#College Entrepreneur
+
+label college_entrepreneur:
+    scene bg_college
     
     if character_gender == "Male":
-        show job_male at left
-        "He takes the risk and invests his savings in the high-risk opportunity. However, the investment fails, and Alex loses a substantial portion of his hard-earned money."
-        "Despite the setback, Alex resolves to learn from his mistakes and adopts a more cautious approach to investing. He seeks guidance from financial experts and educates himself on prudent investment strategies, setting himself on a path towards long-term financial success."
+        show college_male_sad at left
+        "Alex arrives at college excited but quickly realizes the financial burden of tuition and living expenses."
+
     elif character_gender == "Female":
-        show highschool_female at left
-        "She takes the risk and invests her savings in the high-risk opportunity. However, the investment fails, and Alexa loses a substantial portion of her hard-earned money."
-        "Despite the setback, Alexa resolves to learn from her mistakes and adopts a more cautious approach to investing. She seeks guidance from financial experts and educates herself on prudent investment strategies, setting herself on a path towards long-term financial success."
-    
+        show college_female_sad at left
+        "Alexa arrives at college excited but quickly realizes the financial burden of tuition and living expenses."
+
+
     menu:
-        "The End":
-            jump end
+        "Dive into entrepreneurship without proper financial planning":
+            $ option = "A"
+            jump entrepreneur_a
+        "Conduct market research and develop a comprehensive plan.":
+            $ option = "B"
+            jump entrepreneur_b
+        "Start a small-scale business with minimal initial investment":
+            $ option = "C"
+            jump entrepreneur_c
+
+label entrepreneur_a:
+    scene bg_college
+
+    if character_gender == "Male":
+        show college_male_sad at left
+        "Alex's venture faces financial challenges and struggles to generate profit, resulting in loss of personal savings and potential debt. Ultimately the business fails."
+        jump job_start
+
+    elif character_gender == "Female":
+        show college_female_sad at left
+        "Alexa's venture faces financial challenges and struggles to generate profit, resulting in loss of personal savings and potential debt. Ultimately the business fails."
+        jump job_start
 
 
-# Job 2nd ending
+label entrepreneur_b:
+    scene bg_college
 
-label job_ends_b:
-    scene job_bg
+    if character_gender == "Male":
+        show college_male_happy at left
+        "By taking a strategic approach to entrepreneurship, Alex's venture gains traction and achieves sustainable growth."
+        "With proper financial planning and risk management, Alex navigates challenges effectively and builds a successful business."
+        jump job_start
+
+    elif character_gender == "Female":
+        show college_female_happy at left
+        "By taking a strategic approach to entrepreneurship, Alexa's venture gains traction and achieves sustainable growth."
+        "With proper financial planning and risk management, Alexa navigates challenges effectively and builds a successful business."
+        jump job_start
+
+
+label entrepreneur_c:
+
+    scene bg_college
+
+    if character_gender == "Male":
+        show college_male_normal at left
+        "While initial growth may be slower, this cautious approach allows Alex to minimize financial risk and learn valuable lessons along the way."
+        "By gradually scaling the business and reinvesting profits, Alex lays a solid foundation for future expansion."
+        jump job_start
+
+    elif character_gender == "Female":
+        show college_female_normal at left
+        "While initial growth may be slower, this cautious approach allows Alexa to minimize financial risk and learn valuable lessons along the way."
+        "By gradually scaling the business and reinvesting profits, Alexa lays a solid foundation for future expansion."
+        jump job_start
+
+#college Higher Studies
+
+label college_higher_studies:
+    scene bg_college
     
     if character_gender == "Male":
-        show job_male at left
-        "He dedicates himself to his job, sacrificing his personal time and well-being for career advancement. However, the increased stress takes a toll on Alex's health and relationships, leaving him feeling burnt out and unfulfilled."
-        "Alex realizes that career advancement should not come at the expense of his well-being. He reevaluates his priorities and takes steps to regain balance in his life, prioritizing his health and happiness above all else."
+        show college_male at left
+        "Alex arrives at college excited but quickly realizes the financial burden of tuition and living expenses."
+
     elif character_gender == "Female":
-        show job_female at left
-        "She dedicates herself to her job, sacrificing her personal time and well-being for career advancement. However, the increased stress takes a toll on Alexa's health and relationships, leaving her feeling burnt out and unfulfilled."
-        "Alexa realizes that career advancement should not come at the expense of her well-being. She reevaluates her priorities and takes steps to regain balance in her life, prioritizing her health and happiness above all else."
+        show college_female at left
+        "Alexa arrives at college excited but quickly realizes the financial burden of tuition and living expenses."
+
 
     menu:
-        "The End.":
-            jump end
+        "Pursue higher studies without considering the financial implications":
+            $ option = "A"
+            jump higher_studies_a
+        "Research scholarship and financial aid options.":
+            $ option = "B"
+            jump higher_studies_b
+        " Balance academic aspirations with financial responsibilities":
+            $ option = "C"
+            jump higher_studies_c
 
-#Job 3rd ending
-label job_ends_c:
+#Higher studies options
+
+label higher_studies_a:
+    scene bg_college
+
+    if character_gender == "Male":
+        show college_male_sad at left
+        "Alex graduates with significant student loan debt and struggles to find employment opportunities that align with academic qualifications, leading to financial stress and uncertainty."
+        jump job_start
+
+    elif character_gender == "Female":
+        show college_female_sad at left
+        "Alexa graduates with significant student loan debt and struggles to find employment opportunities that align with academic qualifications, leading to financial stress and uncertainty."
+        jump job_start
+
+
+label higher_studies_b:
+    scene bg_college
+
+    if character_gender == "Male":
+        show college_male_happy at left
+        "By actively seeking out financial assistance and gaining practical experience, Alex graduates with minimal student loan debt and valuable skills."
+        "With a clear plan for repayment and career advancement, Alex transitions smoothly into the workforce or further education."
+        jump job_start
+
+    elif character_gender == "Female":
+        show college_female_happy at left
+        "By actively seeking out financial assistance and gaining practical experience, Alex graduates with minimal student loan debt and valuable skills."
+        "With a clear plan for repayment and career advancement, Alexa transitions smoothly into the workforce or further education."
+        jump job_start
+
+
+label higher_studies_c:
+
+    scene bg_college
+
+    if character_gender == "Male":
+        show college_male_happy at left
+        "With careful financial planning and budgeting, Alex completes the program with manageable debt and sets a course for future financial success."
+        "Additionally, Alex begins investing early to build wealth and secure a stable financial future."
+        jump job_start
+
+    elif character_gender == "Female":
+        show college_female_happy at left
+        "With careful financial planning and budgeting, Alex completes the program with manageable debt and sets a course for future financial success."
+        "Additionally, Alexa begins investing early to build wealth and secure a stable financial future."
+        jump job_start
+
+
+
+
+
+#Job start
+
+
+label job_start:
+    scene bg_college_2
+    if character_gender == "Male":
+        show casual_male at left
+    elif character_gender == "Female":
+        show casual_female at left
+
+    menu:
+        "Alex is navigating through various job opportunities after completing his college degree."
+        "He's faced with a crucial decision that will impact his financial future."
+
+        "Seek for a job":
+            $ life = "Part-Time Job Seeker"
+            jump job_seek
+        "Start a business":
+            $ life = "Entrepreneur"
+            jump business
+        # "Work for a big corporate company":
+        #     $ life = "Job"
+        #     jump corporate
+
+#Job seeking
+label job_seek:
     scene job_bg
-    
     if character_gender == "Male":
         show job_male_sad at left
-        "He indulges in the momentary pleasure of owning the luxury item. However, the excitement fades quickly, and Alex is left with regret as he struggles to justify the extravagant purchase."
-        "Alex acknowledges his lapse in judgment and commits to making more mindful financial decisions in the future. He creates a budget, tracks his expenses, and cultivates discipline in his spending habits, empowering himself to achieve his financial goals with patience and perseverance."
+        "Alex is excited but for opportunities but quickly realizes the financial burden of tuition and living expenses."
+
     elif character_gender == "Female":
         show job_female_sad at left
-        "She indulges in the momentary pleasure of owning the luxury item. However, the excitement fades quickly, and Alexa is left with regret as she struggles to justify the extravagant purchase."
-        "Alexa acknowledges her lapse in judgment and commits to making more mindful financial decisions in the future. She creates a budget, tracks her expenses, and cultivates discipline in her spending habits, empowering herself to achieve her financial goals with patience and perseverance."
+        "Alexa is excited but for opportunities but quickly realizes the financial burden of tuition and living expenses."
 
+
+    menu:
+        "Accept a low-paying job without considering future financial goals":
+            $ option = "A"
+            jump job_seek_a
+        "Secure a job with growth potential and invest in further development.":
+            $ option = "B"
+            jump job_seek_b
+        "Explore various job opportunities and choose wisely.":
+            $ option = "C"
+            jump job_seek_c
+
+label job_seek_a:
+
+    scene job_bg
+
+    if character_gender == "Male":
+        show job_male_sad at left
+        "Without considering long-term financial goals, Alex finds it challenging to cover expenses and save for the future."
+        "This leads to financial instability and missed opportunities for career growth."
+        jump end_game
+
+    elif character_gender == "Female":
+        show job_female_sad at left
+        "Without considering long-term financial goals, Alexa finds it challenging to cover expenses and save for the future."
+        "This leads to financial instability and missed opportunities for career growth."
+        jump end_game
+
+
+label job_seek_b:
+
+    scene job_bg
+
+    if character_gender == "Male":
+        show job_male_happy at left
+        "By prioritizing career growth and financial education, Alex advances steadily in the chosen field."
+        "With careful budgeting and strategic investments, Alex achieves financial stability and lays a strong foundation for long-term success."
+        jump end_game
+
+    elif character_gender == "Female":
+        show job_female_happy at left
+        "By prioritizing career growth and financial education, Alex aadvances steadily in the chosen field."
+        "With careful budgeting and strategic investments, Alexa achieves financial stability and lays a strong foundation for long-term success."
+        jump end_game
+
+
+label job_seek_c:
+
+    scene job_bg
+
+    if character_gender == "Male":
+        show job_male_normal at left
+        "Alex takes a balanced approach, considering both immediate financial needs and long-term career goals."
+        "While not maximizing immediate earnings, this approach allows Alex to maintain financial stability while also preparing for future advancement opportunities."
+        jump end_game
+
+    elif character_gender == "Female":
+        show job_male_normal at left
+        "Alex takes a balanced approach, considering both immediate financial needs and long-term career goals."
+        "While not maximizing immediate earnings, this approach allows Alexa to maintain financial stability while also preparing for future advancement opportunities."
+        jump end_game
+
+label business:
+
+    scene job_bg
+    if character_gender == "Male":
+        show job_male at left
+        "Alex is excited but quickly realizes the financial burden of living expenses."
+
+    elif character_gender == "Female":
+        show job_female at left
+        "Alexa is excited but quickly realizes the financial burden of living expenses."
+
+
+    menu:
+        " Dive into entrepreneurship without proper financial planning or risk assessment.":
+            $ option = "A"
+            jump business_a
+        "Conduct market research and develop a comprehensive plan.":
+            $ option = "B"
+            jump business_b
+        "Start a small-scale business with minimal initial investment.":
+            $ option = "C"
+            jump business_c
+
+
+
+
+
+
+label business_a:
+    scene job_bg
+
+    if character_gender == "Male":
+        show job_male_sad at left
+        "Alex's venture faces financial challenges and struggles to generate profit, resulting in loss of personal savings and potential debt."
+        " Without a solid financial plan, the business flounders and fails to reach its potential."
+        jump end_game
+
+    elif character_gender == "Female":
+        show job_female_sad at left
+        "Without considering long-term financial goals, Alexa finds it challenging to cover expenses and save for the future."
+        "This leads to financial instability and missed opportunities for career growth."
+        jump end_game
+
+
+label business_b:
+
+    scene job_bg
+
+    if character_gender == "Male":
+        show job_male_happy at left
+        "By taking a strategic approach to entrepreneurship, Alex's venture gains traction and achieves sustainable growth."
+        "With proper financial planning and risk management, Alex navigates challenges effectively and builds a successful business."
+        jump end_game
+
+    elif character_gender == "Female":
+        show job_female_happy at left
+        "By taking a strategic approach to entrepreneurship, Alexa's venture gains traction and achieves sustainable growth."
+        "With proper financial planning and risk management, Alexa navigates challenges effectively and builds a successful business."
+        jump end_game
+
+
+
+
+label business_c:
+
+    scene job_bg
+
+    if character_gender == "Male":
+        show job_male_happy at left
+        "While initial growth may be slower, this cautious approach allows Alex to minimize financial risk and learn valuable lessons along the way."
+        "By gradually scaling the business and reinvesting profits, Alex lays a solid foundation for future expansion and ensures prudent financial management."
+        jump end_game
+
+    elif character_gender == "Female":
+        show job_female_happy at left
+        "While initial growth may be slower, this cautious approach allows Alexa to minimize financial risk and learn valuable lessons along the way."
+        "By gradually scaling the business and reinvesting profits, Alexa lays a solid foundation for future expansion and ensures prudent financial management."
+        jump end_game
+
+
+label end_game:
+    scene main_image
+    
+    if character_gender == "Male":
+        show job_male_happy at left
+        "While Alex gains valuable experience in his new role, he realizes the importance of financial planning and budgeting to make ends meet on his lower salary."
+        "This choice teaches him the importance of being proactive in managing his finances, even in challenging situations."
+    elif character_gender == "Female":
+        show job_female_happy at left
+        "While Alexa gains valuable experience in her new role, she realizes the importance of financial planning and budgeting to make ends meet on her lower salary."
+        "This choice teaches her the importance of being proactive in managing her finances, even in challenging situations."
     menu:
         "The End.":
             jump end
@@ -342,7 +733,6 @@ label job_ends_c:
 # End of game
 label end:
     "Thank you for playing CashVille: The Financial Literacy Adventure!"
-
 
 
 
