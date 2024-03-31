@@ -16,12 +16,15 @@ Cashville is an engaging game designed to enhance financial literacy among young
 - **Partnerships:** Integrate banking, investment, and financial planning services directly into the game.
 
 ## Installation
-**We weren't able to host the game during the competition due to time constraints, below is the process to play the game locally. You can contact us to get the direct link of the game**
-
-1. Clone the repository: `https://github.com/Profannyti/CashVille`
-2. Navigate to the project directory: `cd cashville`
-3. Install dependencies: Ren'py
-4. Launch the game
+1. Go to [CasVille](https://profannyti.itch.io/cashville) 
+2. Click on the download button corresponding to your operating system (Mac OS, Windows, or Linux).
+3. If your system gives a warning about the download, click on "I understand the risk" and select "Download anyway" to proceed.
+4. Once the download is complete, navigate to your Downloads folder.
+5. Locate the downloaded zip file and click on it to select it.
+6. Click on "Extract all" to unzip the file.
+7. After extraction, you will find a file named "CashVille".
+8. Click on the "CashVille" file to open it. You may receive a warning, but there's no need to worry. Just click on "Play anyways" to proceed.
+9. Start playing CashVille and embark on your journey towards financial literacy!
 
 ## How to Play
 
