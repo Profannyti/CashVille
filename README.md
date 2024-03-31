@@ -16,7 +16,7 @@ Cashville is an engaging game designed to enhance financial literacy among young
 - **Partnerships:** Integrate banking, investment, and financial planning services directly into the game.
 
 ## Installation
-1. Go to [CasVille](https://profannyti.itch.io/cashville) 
+1. Go to [CashVille](https://profannyti.itch.io/cashville) 
 2. Click on the download button corresponding to your operating system (Mac OS, Windows, or Linux).
 3. If your system gives a warning about the download, click on "I understand the risk" and select "Download anyway" to proceed.
 4. Once the download is complete, navigate to your Downloads folder.
