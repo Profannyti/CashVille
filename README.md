@@ -50,11 +50,11 @@ Cashville is developed using Ren'Py, an open-source visual novel engine. Special
 
 ## Demo Video
 
-This project has a demo video - see the [DEMO VIDEO](https://youtu.be/j6Rdypo-QKY?si=54dzZlpMDN6tGXiT) file for details.
+This project has a demo video - see the [DEMO VIDEO](https://youtu.be/j6Rdypo-QKY) file for details.
 
 ## Feedback and Support
 
-For feedback or support inquiries, please contact [your@email.com](abittotheright.com).
+For feedback or support inquiries, please contact [cashville.com](abittotheright.com).
 
 
 
